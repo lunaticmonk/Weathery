@@ -42,8 +42,20 @@
     });
     function getForecast(location){
         $.get('https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json',function (data){
+               if(data.query.results === null){
+                alert('Please enter a valid city name.');
+               }
+               else{
                console.log(data);
-        });
+               $('.forecast').html('<h4>' + data.query.results.channel.item.title + '</h4>');
+               $('.forecast').append('<ul><li>Humidity: ' + data.query.results.channel.atmosphere.humidity);
+               $('.forecast').append('<ul><li>pressure: ' + data.query.results.channel.atmosphere.pressure);
+               $('.forecast').append('<ul><li>rising: ' + data.query.results.channel.atmosphere.rising);
+               $('.forecast').append('<ul><li>visibility: ' + data.query.results.channel.atmosphere.visibility + '</ul>');
+               $('.forecast').append('Temperature: ' + data.query.results.channel.item.condition.temp + ' ' + data.query.results.channel.item.condition.text);
+               $('.forecast').append(data.query.results.channel.item.description);
+       }
+    });
     }
 
 })();
