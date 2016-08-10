@@ -61,24 +61,24 @@
 
     function showInfo(data){
       console.log(data);
-      if(data.query.results.channel.item.condition.temp<68){
+      if(data.query.results.channel.item.condition.temp<'68'){
         $('.precaution').append('The place is enough cold to make you sick.');
         $('.precaution').append('Carry warm clothes with you.');
         $('.precaution').append('Sudden temperature change may cause your health to spoil.');
       }
-      else if(data.query.results.channel.item.condition.temp>68 || data.query.results.channel.item.condition.temp<87){
+      else if(data.query.results.channel.item.condition.temp>'68' || data.query.results.channel.item.condition.temp<'87'){
         $('.precaution').append('<br>' + '<li>The place has low temperature.Good weather,soothing air for sight-seeing.');
         $('.precaution').append('<br>' + '<li>Not necessary but still carry extra clothes to warm you up.');
         $('.precaution').append('<br>' + '<li>Sudden temperature change may cause your health to spoil.' + '</ul>');
       }
 
-      else if(data.query.results.channel.item.condition.temp>86 || data.query.results.channel.item.condition.temp<106){
+      else if(data.query.results.channel.item.condition.temp>'86' || data.query.results.channel.item.condition.temp<'106'){
         $('.precaution').append('<br>' + '<li>The place has medium temperature.Good weather,but humidity is more.');
         $('.precaution').append('<br>' + '<li>No extra clothing demands.Normal ones would be good.Woah!');
         $('.precaution').append('<br>' + '<li>Temperature is normal.No need to worry.' + '</ul>');
       }
 
-      else if(data.query.results.channel.item.condition.temp>105){
+      else if(data.query.results.channel.item.condition.temp>'105'){
         $('.precaution').append('<br>' + '<li>The place has high temperature.Bad atmospheremmay damage skin.');
         $('.precaution').append('<br>' + '<li>Wear cotton clothes.Loose clothes made of linen would be very comfortable.');
         $('.precaution').append('<br>' + '<li>No environment for tourism or sight-seeing.' + '</ul>');
