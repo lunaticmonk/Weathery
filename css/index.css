@@ -13,13 +13,17 @@ header{
   font-family: 'Quicksand',sans-serif;
 }
 hr{color: #777;}
-.container{width:100%; height:40em; margin:5% 2%; display: inline-block; }
+.container{width:100%; height:40em; margin:5% 0%; display: inline-block; }
 .container div{
   width:30%;
-  height:30%;
+  height:100%;
   background-color: #fff;
   font-family: 'Quicksand';
   box-shadow: 5px 5px 5px #000;
+  display: inline-block;
+  float: left;
+  margin-left: 2%;
+  border-radius: 0%;
 }
 #cityname{
   height:30px;
@@ -31,4 +35,8 @@ hr{color: #777;}
   float: right;
   margin-right:6%;
 }
-
+/*
+.forecast h4,li{
+  padding:0% 5%;
+}
+*/
