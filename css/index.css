@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Quicksand);
-
+body{
+  background: url(../images/background.jpg) no-repeat center center;
+  -webkit-background: url(../images/background.jpg) no-repeat center center;
+  -moz-background: url(../images/background.jpg) no-repeat center center;
+  -o-background: url(../images/background.jpg) no-repeat center center;
+  width:100%;
+}
 body{
   width: 100%;
   background-color: #e3e3e3;
@@ -8,12 +14,12 @@ body{
 header{
   margin-left: 2%;
   width:100%;
-  color: #000;
+  color: #fff;
   font-size: 3em;
   font-family: 'Quicksand',sans-serif;
 }
 hr{color: #777;}
-.container{width:100%; height:40em; margin:5% 0%; display: inline-block; }
+.container{width:100%; height:32em; margin:5% 0%; display: inline-block; }
 .container div{
   width:30%;
   height:100%;
@@ -26,7 +32,8 @@ hr{color: #777;}
   border-radius: 0%;
 }
 #cityname{
-  height:30px;
+  height:45px;
+  background-color: #e3e3e3;
   border-radius: 5px 5px 5px 5px;
   box-shadow: 2px 2px 2px #000;
 }
@@ -40,3 +47,40 @@ hr{color: #777;}
   padding:0% 5%;
 }
 */
+
+.form-mid{
+  position: absolute;
+  top:45%;
+  left:45%;
+}
+
+@keyframes button{
+  0% {background-color: #b5bec5;}
+  50% {background-color: #e3eef7;}
+}
+
+#submitbtn{
+  color: #fff;
+  font-size: .6em;
+  width:120px;
+  height:50px;
+  border:2px solid #44474a;
+  border-radius: 5px;
+  background-color: #b5bec5;
+}
+
+#submitbtn:hover{
+  color:#000;
+  width:120px;
+  height:50px;
+  animation-name:button;
+  animation-duration:2s;
+  cursor:pointer;
+  background-color: #b5bec5;
+}
+
+a{
+  display: block;
+  text-decoration: none;
+  color:#fff;
+}
