@@ -32,6 +32,7 @@ hr{color: #777;}
   border-radius: 0%;
 }
 #cityname{
+  width: 500px;
   height:45px;
   background-color: #e3e3e3;
   border-radius: 5px 5px 5px 5px;
@@ -51,7 +52,7 @@ hr{color: #777;}
 .form-mid{
   position: absolute;
   top:45%;
-  left:45%;
+  left:30%;
 }
 
 @keyframes button{
