@@ -92,4 +92,33 @@
         $('.precaution').append('<br>' + '<li>No environment for tourism or sight-seeing.' + '</ul>');
       }       
   }
+
+//Twitter object
+
+    var Twitter = {
+      init : function(config){
+      this.url = 'https://api.twitter.com/1.1/search/tweets.json?q=dogs';
+      this.template = config.template;
+      this.container = config.container;
+      this.fetch();
+    },
+
+      fetch:function(){
+        var self = this;
+          $.ajax({
+            url: 'https://api.twitter.com/1.1/search/tweets.json?q=dogs&callback=?
+            ',
+            dataType : 'jsonp',
+            success : function(data){
+              console.log(data);
+            }
+          });
+        }
+    };
+
+    Twitter.init({
+      template: $('#tweet-temp'),
+      container : $('#place-tweets')
+    });
+
 })();
